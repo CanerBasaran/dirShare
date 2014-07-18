@@ -1,5 +1,5 @@
-litedirshare
-=================
+litedirshare - only 3kB
+=======================
 ultralightweight web application for directory sharing.
 
 system requirements
