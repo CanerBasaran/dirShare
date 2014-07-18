@@ -1,14 +1,12 @@
-dirShare
+litedirshare
 =================
-dirShare is an open source lightweight application for directory sharing.
-
+ultralightweight web application for directory sharing.
 
 system requirements
 -------------------
-* Python version 2.6 or greater (if Python version lesser than 2.6, simplejson)
+* Python version 2.6 or greater
 * Bottle (lightweight WSGI micro web-framework) http://bottlepy.org/
-
 
 sample usage
 ------------
-python dirshare.py /home/Foo/foo
+python litedirshare.py /directory/path host_ip port
