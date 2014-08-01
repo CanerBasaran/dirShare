@@ -40,11 +40,12 @@ def download():
 
 
 def read_folder(path):
+    path = path.decode("utf-8")
     to_html = ""
     if path == '':
         path_dir = PATH_LOCAL
     else:
-        path_dir = PATH_LOCAL + "/" + path.decode("utf-8")
+        path_dir = PATH_LOCAL + "/" + path
     for archive in sorted(os.listdir(path_dir)):
         if not archive.startswith('.'):
             file_path = os.path.join(path_dir, archive)
@@ -52,7 +53,7 @@ def read_folder(path):
                 to_html += u"<tr><td>[DIR ] &#x2605; <a href='%s/%s'>%s </a></td> <td class='data'></td> </tr>" % (request.fullpath, archive, archive)
             else:
                 to_html += u"<tr><td>[FILE] &#x2606; <a href='/download?file=%s/%s'>%s</a></td> <td class='data'>%s</td></tr>" % (path, archive, archive, convert_bytes(file_path))
-    return HEADER.replace("{{ path_dir }}", path.decode("utf-8")) + to_html + FOOTER
+    return HEADER.replace("{{ path_dir }}", path) + to_html + FOOTER
 
 
 def convert_bytes(path):
