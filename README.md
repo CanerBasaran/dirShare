@@ -10,3 +10,5 @@ system requirements
 sample usage
 ------------
 python litedirshare.py /directory/path host_ip port
+
+[DO](https://m.do.co/c/f31e941aecd1)
